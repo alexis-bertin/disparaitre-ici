@@ -13,6 +13,7 @@
   "dependencies": {
     "compass-mixins": "^0.12.10",
     "jquery": "^3.6.0",
+    "lazyframe": "^2.2.4",
     "yarn": "^1.22.10"
   },
   "devDependencies": {

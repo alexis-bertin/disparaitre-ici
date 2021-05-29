@@ -22,29 +22,92 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="./public/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-
     <title>Derrière le soleil présente son nouvel album | Disparaître ici</title>
     <meta name="description" content="Découvrez le nouvel album de Derrière le soleil, intitulé Disparaître ici." />
     <link rel='stylesheet' id='style-main-css' href='./public/build/app.css' type='text/css' media='all' />
     <style>
         @font-face {
-            font-family: 'beauty-and-the-beast';
+            font-family: 'Beauty and The Beast';
             src:  url("./public/build/fonts/beauty-and-the-beast-sample.ttf") format("truetype"),
             url("./public/build/fonts/beauty-and-the-beast-sample.otf") format('opentype');
         }
     </style>
 </head>
-<body>
+<body id="home">
     <header id="header">
-        //Header...
+        <div class="container">
+            <a href="./index.html" class="logo">Disparaître ici</a>
+            <a href="./booklet.html" class="booklet">Livret interactif</a>
+        </div>
     </header>
-
-    <section id="">
-        //First section...
+    <section id="top-home">
+        <div class="container">
+            <div class="content">
+                <p class="surtitre"><strong>Derrière le soleil</strong> présente son nouvel album</p>
+                <h1 class="underline"><span>Disparaître ici</span></h1>
+                <a href="https://derrierelesoleil.bandcamp.com" class="btn">Acheter</a>
+            </div>
+        </div>
+        <div class="bg-img">
+            <img src="./public/images/black_sea.jpg" alt="Dans le grenier">
+        </div>
     </section>
-
+    <section id="video-home">
+        <div class="container">
+            <p class="surtitre"><strong>Vidéo</strong> officielle</p>
+            <h2 class="underline"><span>Les lèvres couleur prune</span></h2>
+        </div>
+        <div class="contain-video">
+            <div class="contain-link">
+                <a href="https://vimeo.com/472634882">Voir sur Vimeo</a>
+            </div>
+            <div class="contain-iframe">
+                <div class="lazyframe" data-src="https://vimeo.com/472634882" data-vendor="vimeo" data-thumbnail="./public/images/extrait-clip.jpg"></div>
+            </div>
+        </div>
+    </section>
+    <section id="next-clip-home">
+        <div class="container">
+            <div class="left">
+                <h2 class="underline"><span>Dans le grenier</span></h2>
+                <p class="texte">
+                    Prochain clip de la mort qui  ok ok ok hein tue reprendra la  superbe chanson intitulée "Dans le grenier". Prochain clip de la mort wouaaaawwwwww qui tue reprendra la superbe chanson intitulée "Dans le grenier".
+                </p>
+            </div>
+            <div class="right">
+                <img src="./public/images/Eyesforeyes.jpg" alt="Dans le grenier">
+            </div>
+        </div>
+        <p class="date">Sortie le 26 mars 2021</p>
+    </section>
+    <section id="booklet-home">
+        <div class="container">
+            <div class="content">
+                <h2 class="underline"><span>L'album en livret numérique</span></h2>
+                <p class="texte">
+                    Il y a un super album sur ce site. Et oui, vous n'imaginez pas à quel point cet album est chouette : hibou, fleur et pollen. Cliquez plus bas pour voir ce qu'il en est. Vous serez pas déçu. Au pire vous le serez, mais juste un tout petit peu.
+                </p>
+                <a href="./booklet.html" class="btn">Vivre l'expérience</a>
+            </div>
+        </div>
+        <div class="bg-img">
+            <img src="./public/images/img-fond.jpg" alt="L'album en livret numérique">
+        </div>
+    </section>
     <footer id="footer">
-        //Footer...
+        <div class="container">
+            <div class="left">
+                <a href="./index.html" class="logo">Disparaître ici</a>
+            </div>
+            <div class="center">
+                <a href="./index.html">Accueil</a>
+                <a href="./booklet.html" class="booklet">Disparaître ici, le livret</a>
+            </div>
+            <div class="right">
+                <a href="https://www.derrierelesoleil.com">Site officiel</a>
+                <a href="https://www.facebook.com/dlsoleil">Contact</a>
+            </div>
+        </div>
     </footer>
     <script type='text/javascript' src='./public/build/app.js' id='js-main-js'></script>
     <script type='text/javascript' src='./public/build/runtime.js' id='js-runtime-js'></script>

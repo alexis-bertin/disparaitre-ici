@@ -1,4 +1,170 @@
-*, section{
+html{
+  overflow-x: hidden;
+  background-color: $bg-color;
+  body{
+    font-family: $font1;
+    font-size: 18px;
+    line-height: 1.2;
+    background-color: $color4;
+    color: $color3;
+    font-weight: 400;
+    max-width: 1920px;
+    margin: 0 auto;
+    overflow-x: hidden;
+  }
+}
+
+h1, h2, h3, h4, h5, h6{
   font-family: $font1;
-  color: red;
+  font-weight: 400;
+  color: $color6;
+}
+
+h1{
+  font-size: 150px;
+  text-transform: uppercase;
+  @media screen and (max-width: $size4){
+    font-size: 45px;
+  }
+  @media screen and (max-width: $size5){
+    font-size: 30px;
+  }
+  &.underline{
+    span{
+      position: relative;
+      background-image: linear-gradient(transparent calc(100% - 40px), black 40px);
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      background-position-y: -20px;
+    }
+  }
+}
+
+h2{
+  font-size: 80px;
+  text-transform: uppercase;
+  @media screen and (max-width: $size4){
+    font-size: 35px;
+  }
+  @media screen and (max-width: $size5){
+    font-size: 26px;
+  }
+  &.underline{
+    span{
+      position: relative;
+      background-image: linear-gradient(transparent calc(100% - 20px), black 20px);
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      background-position-y: -10px;
+    }
+  }
+}
+
+h3{
+  font-size: 30px;
+  @media screen and (max-width: $size4){
+    font-size: 25px;
+  }
+  @media screen and (max-width: $size5){
+    font-size: 22px;
+  }
+}
+
+h4{
+  font-size: 26px;
+  @media screen and (max-width: $size4){
+    font-size: 24px;
+  }
+  @media screen and (max-width: $size5){
+    font-size: 20px;
+  }
+}
+
+h5{
+  font-size: 24px;
+  @media screen and (max-width: $size4){
+    font-size: 20px;
+  }
+}
+
+h6{
+  font-size: 22px;
+  @media screen and (max-width: $size4){
+    font-size: 20px;
+  }
+}
+
+a{
+  text-decoration: none;
+  color: $color3;
+}
+
+*.btn{
+  display: inline-block;
+  font-size: 30px;
+  font-family: $font2;
+  color: $color2;
+  padding: 20px 100px;
+  line-height: 1;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-bottom: 0px;
+  margin-right: 0px;
+  @include transition(.25s ease-in-out);
+  &:before{
+    content:'';
+    z-index: -1;
+    display: block;
+    background-color: $color5;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    @include transition(.25s ease-in-out);
+  }
+  &:after{
+    content:'';
+    z-index: 0;
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border: 1px solid $color2;
+    @include border-radius(5px);
+  }
+  &:hover{
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    &:before{
+      left: 0px;
+      top: 0px;
+    }
+  }
+}
+
+p{
+  line-height: 2;
+}
+
+strong{
+  font-weight: bold;
+}
+
+div.container{
+  display: block;
+  position: relative;
+  max-width: $container;
+  width: 100%;
+  margin: 0 auto;
+  @media(max-width: $container + $goutiere){
+    max-width: calc(100% - #{$goutiere});
+  }
 }
