@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
+      <excludeFolder url="file://$MODULE_DIR$/_dev/vendor/symfony/polyfill-mbstring" />
+      <excludeFolder url="file://$MODULE_DIR$/_dev/vendor/symfony/deprecation-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/_dev/vendor/psr/container" />
+      <excludeFolder url="file://$MODULE_DIR$/_dev/vendor/psr/event-dispatcher" />
+      <excludeFolder url="file://$MODULE_DIR$/_dev/vendor/psr/log" />
+      <excludeFolder url="file://$MODULE_DIR$/_dev/vendor/symfony/polyfill-php73" />
+      <excludeFolder url="file://$MODULE_DIR$/_dev/vendor/symfony/asset" />
+      <excludeFolder url="file://$MODULE_DIR$/_dev/vendor/symfony/error-handler" />
+      <excludeFolder url="file://$MODULE_DIR$/_dev/vendor/symfony/event-dispatcher-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/_dev/vendor/symfony/polyfill-ctype" />
+      <excludeFolder url="file://$MODULE_DIR$/_dev/vendor/symfony/filesystem" />
+      <excludeFolder url="file://$MODULE_DIR$/_dev/vendor/symfony/config" />
+      <excludeFolder url="file://$MODULE_DIR$/_dev/vendor/symfony/service-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/_dev/vendor/symfony/polyfill-php80" />
+      <excludeFolder url="file://$MODULE_DIR$/_dev/vendor/symfony/http-kernel" />
+      <excludeFolder url="file://$MODULE_DIR$/_dev/vendor/symfony/dependency-injection" />
+      <excludeFolder url="file://$MODULE_DIR$/_dev/vendor/symfony/var-dumper" />
+      <excludeFolder url="file://$MODULE_DIR$/_dev/vendor/symfony/http-foundation" />
+      <excludeFolder url="file://$MODULE_DIR$/_dev/vendor/symfony/event-dispatcher" />
+      <excludeFolder url="file://$MODULE_DIR$/_dev/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/_dev/vendor/symfony/webpack-encore-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/_dev/vendor/symfony/http-client-contracts" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

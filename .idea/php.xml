@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="$PROJECT_DIR$/_dev/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/_dev/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/_dev/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/_dev/vendor/psr/event-dispatcher" />
+      <path value="$PROJECT_DIR$/_dev/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/_dev/vendor/symfony/polyfill-php73" />
+      <path value="$PROJECT_DIR$/_dev/vendor/symfony/asset" />
+      <path value="$PROJECT_DIR$/_dev/vendor/symfony/error-handler" />
+      <path value="$PROJECT_DIR$/_dev/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/_dev/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/_dev/vendor/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/_dev/vendor/symfony/config" />
+      <path value="$PROJECT_DIR$/_dev/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/_dev/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/_dev/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/_dev/vendor/symfony/dependency-injection" />
+      <path value="$PROJECT_DIR$/_dev/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/_dev/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/_dev/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/_dev/vendor/composer" />
+      <path value="$PROJECT_DIR$/_dev/vendor/symfony/webpack-encore-bundle" />
+      <path value="$PROJECT_DIR$/_dev/vendor/symfony/http-client-contracts" />
+    </include_path>
+  </component>
+</project>
