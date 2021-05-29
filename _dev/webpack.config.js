@@ -1,4 +1,4 @@
-const Encore    = require('@symfony/webpack-encore');
+const Encore            = require('@symfony/webpack-encore');
 
 if (!Encore.isRuntimeEnvironmentConfigured()) {
     Encore.configureRuntimeEnvironment(process.env.NODE_ENV || 'dev');
@@ -9,6 +9,7 @@ Encore
     .setOutputPath('../public/build/')
     // public path used by the web server to access the output path
     .setPublicPath('/build/')
+    .setManifestKeyPrefix('./')
 
     .addEntry('app', './js/main.js')
 
@@ -18,8 +19,6 @@ Encore
     .enableBuildNotifications()
     .enableSourceMaps(!Encore.isProduction())
 
-    //.enableVersioning(Encore.isProduction())
-
     .configureBabelPresetEnv((config) => {
         config.useBuiltIns = 'usage';
         config.corejs = 3;
@@ -28,15 +27,9 @@ Encore
     .enableSassLoader()
 
     .copyFiles({
-        from: './img',
-        to: 'images/[path][name].[ext]',
-        pattern: /\.(png|jpg|jpeg|svg)$/
-    })
-
-    .copyFiles({
         from: './fonts',
         to: 'fonts/[path][name].[ext]',
-        pattern: /\.(eot|svg|ttf|woff)$/
+        pattern: /\.(eot|svg|otf|ttf|woff)$/
     })
 ;
 

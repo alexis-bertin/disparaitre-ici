@@ -1,5 +1,7 @@
 {
-  "build/app.css": "/build/app.css",
-  "build/app.js": "/build/app.js",
-  "build/runtime.js": "/build/runtime.js"
+  "./app.css": "/build/app.css",
+  "./app.js": "/build/app.js",
+  "./runtime.js": "/build/runtime.js",
+  "./fonts/beauty-and-the-beast-sample.ttf": "/build/fonts/beauty-and-the-beast-sample.ttf",
+  "./fonts/beauty-and-the-beast-sample.otf": "/build/fonts/beauty-and-the-beast-sample.otf"
 }
