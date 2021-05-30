@@ -428,6 +428,9 @@ html{
         @media screen and (max-width: $size3){
           height: 600px;
         }
+        @media screen and (max-width: $size4){
+          margin-bottom: 50px;
+        }
         div.container{
           position: relative;
           z-index: 1;
