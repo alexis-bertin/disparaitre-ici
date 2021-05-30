@@ -39,7 +39,7 @@ var DEFAULTS = {
     playedColor: "#FEF25D",
     backgroundColor: "transparent",
     iconColor: "transparent",
-    borderWidth: 1,
+    borderWidth: 3,
     size: 48,
     className: 'circle-audio-player'
 };

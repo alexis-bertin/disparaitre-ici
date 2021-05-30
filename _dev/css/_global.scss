@@ -72,36 +72,12 @@ h2{
 }
 
 h3{
-  font-size: 30px;
-  @media screen and (max-width: $size4){
-    font-size: 25px;
+  font-size: 50px;
+  @media screen and (max-width: $size0){
+    font-size: 40px;
   }
-  @media screen and (max-width: $size5){
+  @media screen and (max-width: $size4){
     font-size: 22px;
-  }
-}
-
-h4{
-  font-size: 26px;
-  @media screen and (max-width: $size4){
-    font-size: 24px;
-  }
-  @media screen and (max-width: $size5){
-    font-size: 20px;
-  }
-}
-
-h5{
-  font-size: 24px;
-  @media screen and (max-width: $size4){
-    font-size: 20px;
-  }
-}
-
-h6{
-  font-size: 22px;
-  @media screen and (max-width: $size4){
-    font-size: 20px;
   }
 }
 
@@ -113,6 +89,7 @@ a{
 *.btn{
   display: inline-block;
   font-size: 30px;
+  cursor: pointer;
   font-family: $font2;
   color: $color2;
   padding: 20px 100px;
@@ -189,6 +166,16 @@ strong{
   font-weight: bold;
 }
 
+span{
+  &.underline{
+    position: relative;
+    background-image: linear-gradient(transparent calc(100% - 10px), black 0px);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position-y: 0px;
+  }
+}
+
 div.container{
   display: block;
   position: relative;
@@ -203,6 +190,7 @@ div.container{
 div.contain-audio{
   div.player-container{
     cursor: pointer;
+    position: absolute;
     width: 100px;
     height: 100px;
     @media screen and (max-width: $size4){
