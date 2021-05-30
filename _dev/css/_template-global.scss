@@ -23,6 +23,14 @@ html{
             height: 100px;
             width: 100px;
             background-image: url(../img/logo.svg);
+            @media screen and (max-width: $size0){
+              height: 80px;
+              width: 80px;
+            }
+            @media screen and (max-width: $size4){
+              height: 50px;
+              width: 50px;
+            }
           }
           &.booklet{
             height: 60px;
@@ -30,6 +38,14 @@ html{
             background-image: url(../img/livret.svg);
             opacity: 1;
             @include transition(.25s ease-in-out);
+            @media screen and (max-width: $size0){
+              height: 50px;
+              width: 50px;
+            }
+            @media screen and (max-width: $size4){
+              height: 35px;
+              width: 35px;
+            }
             &:before{
               content:'';
               z-index: -1;
@@ -73,6 +89,10 @@ html{
             height: 80px;
             width: 80px;
             background-image: url(../img/logo.svg);
+            @media screen and (max-width: $size0){
+              height: 60px;
+              width: 60px;
+            }
           }
         }
         div.center, div.right{

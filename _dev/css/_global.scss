@@ -11,6 +11,9 @@ html{
     max-width: 1920px;
     margin: 0 auto;
     overflow-x: hidden;
+    @media screen and (max-width: $size0){
+      font-size: 16px;
+    }
   }
 }
 
@@ -23,19 +26,24 @@ h1, h2, h3, h4, h5, h6{
 h1{
   font-size: 150px;
   text-transform: uppercase;
-  @media screen and (max-width: $size4){
-    font-size: 45px;
+  @media screen and (max-width: $size0){
+    font-size: 100px;
   }
-  @media screen and (max-width: $size5){
-    font-size: 30px;
+  @media screen and (max-width: $size4){
+    text-align: center;
+    font-size: 44px;
   }
   &.underline{
     span{
       position: relative;
-      background-image: linear-gradient(transparent calc(100% - 40px), black 40px);
+      background-image: linear-gradient(transparent calc(100% - 40px), black 0px);
       background-repeat: no-repeat;
       background-size: 100% 100%;
       background-position-y: -20px;
+      @media screen and (max-width: $size4){
+        background-image: linear-gradient(transparent calc(100% - 15px), black 0px);
+        background-position-y: -5px;
+      }
     }
   }
 }
@@ -43,19 +51,22 @@ h1{
 h2{
   font-size: 80px;
   text-transform: uppercase;
-  @media screen and (max-width: $size4){
-    font-size: 35px;
+  @media screen and (max-width: $size0){
+    font-size: 60px;
   }
-  @media screen and (max-width: $size5){
-    font-size: 26px;
+  @media screen and (max-width: $size4){
+    font-size: 28px;
   }
   &.underline{
     span{
       position: relative;
-      background-image: linear-gradient(transparent calc(100% - 20px), black 20px);
+      background-image: linear-gradient(transparent calc(100% - 20px), black 0px);
       background-repeat: no-repeat;
       background-size: 100% 100%;
       background-position-y: -10px;
+      @media screen and (max-width: $size4){
+        background-image: inherit;
+      }
     }
   }
 }
@@ -114,6 +125,13 @@ a{
   margin-bottom: 0px;
   margin-right: 0px;
   @include transition(.25s ease-in-out);
+  @media screen and (max-width: $size0){
+    font-size: 25px;
+  }
+  @media screen and (max-width: $size4){
+    font-size: 18px;
+    padding: 15px 50px;
+  }
   &:before{
     content:'';
     z-index: -1;
@@ -125,6 +143,10 @@ a{
     top: -10px;
     left: -10px;
     @include transition(.25s ease-in-out);
+    @media screen and (max-width: $size4){
+      top: -5px;
+      left: -5px;
+    }
   }
   &:after{
     content:'';
