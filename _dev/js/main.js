@@ -23,7 +23,11 @@ jQuery( document ).ready(function() {
 
     //AUDIO PLAYERS
     jQuery('.player-container').on('click', function(){
-        jQuery(this).toggleClass('active');
+        if(jQuery(this).children().hasClass('is-playing')){
+            jQuery(this).addClass('active');
+        } else{
+            jQuery(this).removeClass('active');
+        }
     })
     //AUDIO #1
     let src1 = jQuery('#sound1').attr('src');
@@ -33,6 +37,14 @@ jQuery( document ).ready(function() {
         borderWidth: 8
     });
     player1.appendTo(playerContainer1);
+    //AUDIO #2
+    let src2 = jQuery('#sound2').attr('src');
+    let player2 = new CircleAudioPlayer({
+        audio: src2,
+        size: 120,
+        borderWidth: 8
+    });
+    player2.appendTo(playerContainer2);
 
 
 })

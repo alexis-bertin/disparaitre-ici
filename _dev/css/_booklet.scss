@@ -278,6 +278,79 @@ html {
           }
         }
       }
+      &#voyage-booklet{
+        position: relative;
+        margin-bottom: 400px;
+        @media screen and (max-width: $size4){
+          margin-bottom: 150px;
+        }
+        div.container{
+          &.title{
+            bottom: -20px;
+            z-index: 3;
+            h2{
+              max-width: 800px;
+              text-align: center;
+              margin: 0 auto;
+            }
+            @media screen and (max-width: $size4){
+              bottom: 0px;
+              top: 60px;
+            }
+          }
+          &.has-content{
+            position: absolute;
+            z-index: 1;
+            width: 50%;
+            max-width: 800px;
+            right: 100px;
+            bottom: -200px;
+            div.content{
+              padding: 60px;
+              background-color: rgba(0, 0, 0, .8);
+            }
+            @media screen and (max-width: $size4){
+              position: relative;
+              width: 100%;
+              max-width: calc(100% - #{$goutiere});
+              right: inherit;
+              bottom: inherit;
+              bottom: -100px;
+              div.content{
+                padding: 30px;
+              }
+            }
+          }
+        }
+        div.contain-audio{
+          div.player-container{
+            z-index: 1;
+            position: absolute;
+            bottom: -60px;
+            left: 100px;
+            @media screen and (max-width: $size4){
+              bottom: -40px;
+              left: 50%;
+              @include translateX(-50%);
+            }
+          }
+        }
+        div.bg-img{
+          height: 1000px;
+          width: 100%;
+          position: relative;
+          @media screen and (max-width: $size4){
+            height: 600px;
+          }
+          img{
+            display: block;
+            position: relative;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+          }
+        }
+      }
     }
   }
 }
