@@ -322,15 +322,30 @@ html{
         div.container{
           @include display-flex();
           @include align-items(center);
+          @media screen and (max-width: $size4){
+            @include flex-direction(column);
+            @include justify-content(center);
+          }
           div.left{
             width: 50%;
             padding-right: 20px;
             @media screen and (max-width: $size3){
               width: 60%;
             }
+            @media screen and (max-width: $size4){
+              width: 100%;
+            }
             h2{
               max-width: 400px;
               margin-bottom: 60px;
+              @media screen and (max-width: $size4){
+                margin-bottom: 40px;
+              }
+            }
+            p.texte{
+              @media screen and (max-width: $size4){
+                margin-bottom: 40px;
+              }
             }
           }
           div.right{
@@ -338,12 +353,25 @@ html{
             @media screen and (max-width: $size3){
               width: 40%;
             }
+            @media screen and (max-width: $size4){
+              width: 100vw;
+            }
             img{
               display: block;
               margin-left: auto;
               max-width: 700px;
+              min-height: 700px;
               width: 100%;
               height: auto;
+              object-fit: cover;
+              @media screen and (max-width: $size2){
+                min-height: 500px;
+              }
+              @media screen and (max-width: $size4){
+                max-width: inherit;
+                min-height: inherit;
+                max-height: 200px;
+              }
             }
           }
         }
@@ -355,10 +383,15 @@ html{
           position: absolute;
           left: 50%;
           bottom: 0px;
+          white-space: nowrap;
           @include translateX(-50%);
           @media screen and (max-width: $size3){
             font-size: 35px;
             bottom: -80px;
+          }
+          @media screen and (max-width: $size4){
+            font-size: 20px;
+            bottom: -60px;
           }
           &:before{
             content:'';
@@ -378,6 +411,10 @@ html{
               height: 100px;
               bottom: -20px;
             }
+            @media screen and (max-width: $size4){
+              right: inherit;
+              left: -20px;
+            }
           }
         }
       }
@@ -396,9 +433,14 @@ html{
           z-index: 1;
           top: 50%;
           @include translateY(-50%);
+          @media screen and (max-width: $size4){
+            top: inherit;
+            @include translateY(0);
+          }
           div.content{
             max-width: 850px;
             margin-left: auto;
+            position: relative;
             @include display-flex();
             @include flex-direction(column);
             @include justify-content(flex-end);
@@ -406,10 +448,44 @@ html{
             h2{
               margin-bottom: 40px;
               text-align: right;
+              position: relative;
+              &:before{
+                content:'';
+                z-index: 1;
+                display: block;
+                width: 200px;
+                height: 200px;
+                position: absolute;
+                top: -150px;
+                opacity: .5;
+                right: 150px;
+                background-color: $color2;
+                @include border-radius(100%);
+                @include transition(.25s ease-in-out);
+                @media screen and (max-width: $size3){
+                  width: 100px;
+                  height: 100px;
+                  top: -60px;
+                }
+                @media screen and (max-width: $size4){
+                  right: 60px;
+                  width: 60px;
+                  height: 60px;
+                  top: -40px;
+                }
+              }
             }
             p.texte{
               text-align: right;
               margin-bottom: 60px;
+              @media screen and (max-width: $size4){
+                margin-bottom: 30px;
+              }
+            }
+            a{
+              @media screen and (max-width: $size4){
+                @include align-self(center);
+              }
             }
           }
         }
@@ -427,6 +503,15 @@ html{
             height: 100%;
             width: 80vw;
             object-fit: cover;
+          }
+          @media screen and (max-width: $size4){
+            position: relative;
+            top: -30px;
+            height: 250px;
+            width: 100vw;
+            img{
+              width: 100vw;
+            }
           }
         }
       }
