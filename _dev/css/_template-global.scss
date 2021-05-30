@@ -152,5 +152,16 @@ html{
         }
       }
     }
+    &#booklet{
+      header{
+        div.container {
+          a {
+            &.booklet {
+              background-image: url(../img/livret-full.svg);
+            }
+          }
+        }
+      }
+    }
   }
 }

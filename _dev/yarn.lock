@@ -1718,6 +1718,11 @@ core-js-compat@^3.9.0, core-js-compat@^3.9.1:
     browserslist "^4.16.6"
     semver "7.0.0"
 
+core-js@^3.13.1:
+  version "3.13.1"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.13.1.tgz#30303fabd53638892062d8b4e802cac7599e9fb7"
+  integrity sha512-JqveUc4igkqwStL2RTRn/EPFGBOfEZHxJl/8ej1mXJR75V3go2mFF4bmUYkEIT1rveHKnkUlcJX/c+f1TyIovQ==
+
 core-util-is@~1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
@@ -2989,6 +2994,11 @@ klona@^2.0.4:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/klona/-/klona-2.0.4.tgz#7bb1e3affb0cb8624547ef7e8f6708ea2e39dfc0"
   integrity sha512-ZRbnvdg/NxqzC7L9Uyqzf4psi1OM4Cuc+sJAkQPjO6XkQIJTNbfK2Rsmbw8fx1p2mkZdp2FZYo2+LwXYY/uwIA==
+
+lazyframe@^2.2.4:
+  version "2.2.4"
+  resolved "https://registry.yarnpkg.com/lazyframe/-/lazyframe-2.2.4.tgz#bff7e4d5f0b7c180e9d22a97c0a30570f0d445db"
+  integrity sha512-pu8KSJM5AjigVdjWEcbh1DSTSTp3dtuucv2NkMZOXAmeOIgjH/U/QL45Nqfeo/TbRiXuAOXocrW6X7BppLTRIQ==
 
 lines-and-columns@^1.1.6:
   version "1.1.6"

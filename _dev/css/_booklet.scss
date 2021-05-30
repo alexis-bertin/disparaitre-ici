@@ -1,0 +1,283 @@
+html {
+  body#booklet {
+    section {
+      &#top-booklet {
+        height: 1000px;
+        position: relative;
+        margin-bottom: 150px;
+        @media screen and (max-width: $size0){
+          height: 800px;
+        }
+        @media screen and (max-width: $size4){
+          height: 100vh;
+          margin-bottom: 100px;
+        }
+        div.container{
+          position: relative;
+          z-index: 1;
+          top: 50%;
+          @include translateY(-50%);
+          div.content{
+            position: relative;
+            p.surtitre{
+              margin-bottom: 20px;
+              font-size: 25px;
+              position: relative;
+              display: inline-block;
+              @media screen and (max-width: $size0){
+                font-size: 22px;
+              }
+              &:after{
+                content:'';
+                display: block;
+                width: 50px;
+                height: 1px;
+                background-color: $color3;
+                position: absolute;
+                right: -70px;
+                top: 50%;
+                @include translateY(-50%);
+              }
+              @media screen and (max-width: $size4){
+                font-size: 12px;
+                left: 50%;
+                margin-bottom: 40px;
+                @include translateX(-50%);
+                &:after{
+                  bottom: -20px;
+                  left: 50%;
+                  right: inherit;
+                  top: inherit;
+                  @include translateX(-50%);
+                }
+              }
+            }
+            h1{
+              max-width: 1000px;
+              margin-bottom: 100px;
+              position: relative;
+              &:before{
+                content:'';
+                z-index: 1;
+                display: block;
+                width: 300px;
+                height: 300px;
+                position: absolute;
+                top: -200px;
+                right: 0px;
+                background-color: $color2;
+                opacity: .5;
+                @include border-radius(100%);
+                @media screen and (max-width: $size0){
+                  width: 200px;
+                  height: 200px;
+                  top: -80px;
+                  right: 120px;
+                }
+                @media screen and (max-width: $size4){
+                  width: 120px;
+                  height: 120px;
+                  top: -80px;
+                  right: 50px;
+                }
+              }
+            }
+            a{
+              left: 50%;
+              @include translateX(-50%);
+            }
+          }
+        }
+        div.bg-img{
+          height: 100%;
+          width: 80vw;
+          max-width: 1600px;
+          position: absolute;
+          left: 0;
+          top: 0;
+          @media screen and (max-width: $size4){
+            width: 100%;
+          }
+          img{
+            display: block;
+            position: relative;
+            height: 100%;
+            width: 80vw;
+            max-width: 100%;
+            object-fit: cover;
+            object-position: left;
+            @media screen and (max-width: $size4){
+              width: 100%;
+            }
+          }
+        }
+      }
+      &#debut-booklet{
+        margin-bottom: 200px;
+        @media screen and (max-width: $size4){
+          margin-bottom: 100px;
+        }
+        div.container{
+          p{
+            font-size: 24px;
+            color: $color6;
+            display: inline-block;
+            left: 50%;
+            position: relative;
+            background-image: linear-gradient(transparent calc(100% - 15px), black 0px);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-position-y: -5px;
+            @include translateX(-50%);
+            @media screen and (max-width: $size4){
+              background-image: inherit;
+              font-size: 12px;
+            }
+          }
+        }
+      }
+      &#commencons-booklet{
+        margin-bottom: 200px;
+        @media screen and (max-width: $size4){
+          margin-bottom: 100px;
+        }
+        div.container{
+          @include display-flex();
+          @include align-items(center);
+          @media screen and (max-width: $size4){
+            @include flex-direction(column);
+            @include justify-content(center);
+          }
+          div.left{
+            width: 50%;
+            padding-right: 20px;
+            @media screen and (max-width: $size3){
+              width: 60%;
+            }
+            @media screen and (max-width: $size4){
+              width: 100%;
+              padding-right: 0px;
+            }
+            h2{
+              max-width: 400px;
+              margin-bottom: 60px;
+              @media screen and (max-width: $size4){
+                margin-bottom: 40px;
+                text-align: center;
+                max-width: 100%;
+              }
+            }
+            div.texte{
+              line-height: 2;
+              ul{
+                line-height: 1.5;
+                padding: 20px 0 20px 20px;
+                li{
+                  position: relative;
+                  &:not(:last-child){
+                    margin-bottom: 10px;
+                  }
+                  &:before{
+                    content:'';
+                    z-index: 1;
+                    display: block;
+                    width: 20px;
+                    height: 20px;
+                    position: absolute;
+                    top: -5px;
+                    left: -15px;
+                    background-color: $color2;
+                    opacity: .5;
+                    @include border-radius(100%);
+                    @media screen and (max-width: $size4){
+                      width: 15px;
+                      height: 15px;
+                      top: -2px;
+                      left: -10px;
+                    }
+                  }
+                }
+              }
+              span.underline{
+                position: relative;
+                background-image: linear-gradient(transparent calc(100% - 10px), black 0px);
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                background-position-y: 0px;
+              }
+              @media screen and (max-width: $size4){
+                margin-bottom: 80px;
+              }
+            }
+          }
+          div.right{
+            position: relative;
+            width: 50%;
+            @media screen and (max-width: $size3){
+              width: 40%;
+            }
+            @media screen and (max-width: $size4){
+              width: 100vw;
+            }
+            img{
+              display: block;
+              margin-left: auto;
+              max-width: 700px;
+              min-height: 700px;
+              width: 100%;
+              height: auto;
+              object-fit: cover;
+              @media screen and (max-width: $size2){
+                min-height: 500px;
+              }
+              @media screen and (max-width: $size4){
+                max-width: inherit;
+                min-height: inherit;
+                height: 500px;
+              }
+            }
+            div.contain-audio{
+              div.player-container{
+                position: absolute;
+                bottom: -60px;
+                left: 120px;
+                @media screen and (max-width: $size4){
+                  bottom: inherit;
+                  left: 50%;
+                  top: -37.5px;
+                  @include translateX(-50%);
+                }
+              }
+            }
+            &:before{
+              content:'';
+              z-index: 1;
+              display: block;
+              width: 300px;
+              height: 300px;
+              position: absolute;
+              top: -100px;
+              left: -100px;
+              background-color: $color1;
+              opacity: .5;
+              @include border-radius(100%);
+              @media screen and (max-width: $size0){
+                width: 200px;
+                height: 200px;
+                top: -50px;
+              }
+              @media screen and (max-width: $size4){
+                width: 120px;
+                height: 120px;
+                top: inherit;
+                bottom: -80px;
+                left: inherit;
+                right: 50px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

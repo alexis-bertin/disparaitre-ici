@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "compass-mixins": "^0.12.10",
+    "core-js": "^3.13.1",
     "jquery": "^3.6.0",
     "lazyframe": "^2.2.4",
     "yarn": "^1.22.10"
