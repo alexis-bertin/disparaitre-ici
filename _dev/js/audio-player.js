@@ -60,7 +60,7 @@ export var CircleAudioPlayer = function (options) {
     // create some things we need
     this._canvas = document.createElement('canvas');
     this._canvas.setAttribute('class', this.className + ' is-loading');
-    this._canvas.addEventListener('mousedown', (function () {
+    this._canvas.addEventListener('click', (function () {
         if (this.playing) {
             this.pause();
         }

@@ -278,7 +278,7 @@ html {
           }
         }
       }
-      &#voyage-booklet{
+      &#voyage-booklet, &#ile-booklet, &#allonge-booklet{
         position: relative;
         margin-bottom: 400px;
         @media screen and (max-width: $size4){
@@ -354,11 +354,11 @@ html {
           }
         }
       }
-      &#oreille-booklet{
+      &#oreille-booklet, &#disparaitre-booklet, &#levres-booklet{
         position: relative;
         margin-bottom: 200px;
         @media screen and (max-width: $size4){
-          margin-bottom: 100px;
+          margin-bottom: 20px;
         }
         div.container{
           h2{
@@ -440,6 +440,9 @@ html {
               padding-left: 20px;
               p{
                 text-align: right;
+                &:not(:last-child){
+                  margin-bottom: 40px;
+                }
                 @media screen and (max-width: $size4){
                   text-align: left;
                 }
@@ -538,6 +541,11 @@ html {
                 @include display-flex();
                 div.swiper-slide{
                   min-width: 100%;
+                  opacity: 1;
+                  @include transition(.25s ease-in-out);
+                  &.swiper-slide-next, &.swiper-slide-prev{
+                    opacity: 0;
+                  }
                   div.contain{
                     @include display-flex();
                     @include justify-content(center);
@@ -624,6 +632,7 @@ html {
                         }
                       }
                       p{
+                        max-width: 700px;
                         @media screen and (max-width: $size4){
                           text-align: center;
                         }
@@ -738,6 +747,297 @@ html {
                 max-height: 100%;
               }
             }
+          }
+        }
+      }
+      &#ile-booklet{
+        div.has-content{
+          right: inherit !important;
+          left: 100px !important;
+          @media screen and (max-width: $size0){
+            width: 70% !important;
+          }
+          @media screen and (max-width: $size4){
+            left: 0px !important;
+            width: 100% !important;
+          }
+        }
+        div.contain-audio{
+          div.player-container{
+            left: inherit !important;
+            right: 200px !important;
+            @media screen and (max-width: $size0){
+              right: 100px !important;
+            }
+            @media screen and (max-width: $size4){
+              right: inherit !important;
+              left: 50% !important;
+            }
+          }
+        }
+      }
+      &#disparaitre-booklet{
+        div.container{
+          div.content{
+            div.left{
+              &:before{
+                content:inherit;
+              }
+            }
+            div.right{
+              position: relative;
+              &:before{
+                content:'';
+                z-index: 1;
+                display: block;
+                width: 280px;
+                height: 280px;
+                position: absolute;
+                top: -100px;
+                left: 50px;
+                background-color: $color2;
+                opacity: .5;
+                @include border-radius(100%);
+                @media screen and (max-width: $size0){
+                  width: 180px;
+                  height: 180px;
+                }
+                @media screen and (max-width: $size4){
+                  width: 70px;
+                  height: 70px;
+                  top: 100px;
+                }
+              }
+            }
+          }
+        }
+      }
+      &#chute-booklet, &#sonar-booklet{
+        margin-bottom: 200px;
+        @media screen and (max-width: $size4){
+          margin-bottom: 100px;
+        }
+        div.container{
+          div.text-card{
+            margin-bottom: 200px;
+            @include display-flex();
+            @include justify-content(space-between);
+            @include align-items(center);
+            @media screen and (max-width: $size4){
+              @include flex-direction(column);
+              margin-bottom: 100px;
+            }
+            div.left{
+              width: calc(50% - 20px);
+              @media screen and (max-width: $size4){
+                width: 100%;
+                margin-bottom: 80px;
+              }
+              h2{
+                margin-bottom: 120px;
+                @media screen and (max-width: $size4){
+                  margin-bottom: 60px;
+                  text-align: center;
+                }
+              }
+              p{
+                @media screen and (max-width: $size4){
+                  text-align: center;
+                }
+              }
+              div.contain-audio{
+                position: relative;
+                div.player-container{
+                  z-index: 1;
+                  position: absolute;
+                  bottom: -150px;
+                  left: 100px;
+                  @media screen and (max-width: $size4){
+                    position: relative;
+                    margin-bottom: 40px;
+                    bottom: -50px;
+                    left: 50%;
+                    @include translateX(-50%);
+                  }
+                }
+              }
+            }
+            div.right{
+              width: calc(50% - 20px);
+              @media screen and (max-width: $size4){
+                width: 100%;
+              }
+              div.contain{
+                opacity: 1;
+                visibility: visible;
+                max-height: 100%;
+                @include display-flex();
+                @include flex-direction(column);
+                @include align-items(center);
+                @include transition(opacity .5s ease-in-out, visibility .5s ease-in-out);
+                img{
+                  width: 450px;
+                  max-width: 100%;
+                  height: auto;
+                  margin-bottom: 60px;
+                  @include box-shadow(8px 8px 10px rgba(0, 0, 0, .4));
+                  @media screen and (max-width: $size3){
+                    width: 400px;
+                  }
+                  @media screen and (max-width: $size4){
+                    width: 220px;
+                    max-width: 100%;
+                  }
+                }
+                &.hidden{
+                  max-height: 0;
+                  opacity: 0;
+                  visibility: hidden;
+                }
+              }
+              div.contain-back{
+                opacity: 0;
+                visibility: hidden;
+                max-height: 0;
+                padding: 0px;
+                border: 2px solid $color2;
+                max-width: 700px;
+                margin: 0 auto;
+                @include border-radius(5px);
+                @include display-flex();
+                @include flex-direction(column);
+                @include align-items(center);
+                @include transition(opacity .5s ease-in-out, visibility .5s ease-in-out);
+                img{
+                  width: 380px;
+                  max-width: 100%;
+                  height: auto;
+                  margin-bottom: 60px;
+                  @include box-shadow(8px 8px 10px rgba(0, 0, 0, .4));
+                  @media screen and (max-width: $size4){
+                    width: 220px;
+                    max-width: 100%;
+                  }
+                }
+                div.content{
+                  margin-bottom: 40px;
+                  p{
+                    text-align: center;
+                  }
+                }
+                div.contain-audio{
+                  position: relative;
+                  div.player-container{
+                    z-index: 1;
+                    position: relative;
+                    left: 50%;
+                    @include translateX(-50%);
+                  }
+                }
+                &.visible{
+                  padding: 40px;
+                  opacity: 1;
+                  visibility: visible;
+                  max-height: 100%;
+                }
+              }
+            }
+          }
+          div.contain-slider{
+            @media screen and (max-width: $size4){
+              margin-bottom: 200px;
+            }
+            div.scroll-swiper{
+              div.swiper-wrapper{
+                @include display-flex();
+                div.swiper-slide{
+                  min-width: 100%;
+                  height: 750px;
+                  @media screen and (max-width: $size4){
+                    height: 300px;
+                  }
+                  img{
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                  }
+                }
+              }
+              div.swiper-scrollbar{
+                left: 50%;
+                position: relative;
+                top: 50px;
+                height: 4px;
+                max-width: 600px;
+                background-color: $color5;
+                @include translateX(-50%);
+                div.swiper-scrollbar-drag{
+                  cursor: grab;
+                  position: relative;
+                  top: -26px;
+                  height: 50px;
+                  border: 2px solid $color2;
+                  background-color: $color4;
+                  @include border-radius(100%);
+                }
+              }
+            }
+          }
+        }
+      }
+      &#light-booklet{
+        margin-bottom: 150px;
+        @media screen and (max-width: $size4){
+          margin-top: 50px;
+        }
+        div.container{
+          margin-bottom: 100px;
+          h2{
+            text-align: center;
+            margin-bottom: 80px;
+          }
+          p{
+            text-align: center;
+            margin-bottom: 40px;
+          }
+          p.big{
+            text-align: center;
+            font-size: 24px;
+            display: inline-block;
+            left: 50%;
+            position: relative;
+            @include translateX(-50%);
+            @media screen and (max-width: $size4){
+              font-size: 20px;
+            }
+            &:before{
+              content:'';
+              z-index: -1;
+              display: block;
+              width: 60px;
+              height: 60px;
+              position: absolute;
+              bottom: -20px;
+              right: 30px;
+              background-color: $color1;
+              opacity: .5;
+              @include border-radius(100%);
+              @include transition(.25s ease-in-out);
+            }
+          }
+        }
+        div.contain-img{
+          width: 100vw;
+          height: 900px;
+          @media screen and (max-width: $size4){
+            height: 400px;
+          }
+          img{
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
           }
         }
       }
